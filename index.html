@@ -13,15 +13,15 @@
 
 	<section class="main">
 		<div id="app">
-			<button class="new-quote">New Quote</button>
+			<button id="new-quote">New Quote</button>
 
 			<a href="#" class="twitter-share">Tweet</a>
 
 			<blockquote>
-				<p>To be, or not to be: that is the question.</p>
+				<p id="content">&nbsp;</p>
 
 				<footer>
-					<cite>William Shakespeare</cite>
+					<cite id="author">&nbsp;</cite>
 				</footer>
 			</blockquote>
 		</div>
@@ -39,6 +39,8 @@
 		</div>
 	</footer>
 
+	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=newQuote"></script>
 </body>
 </html>
