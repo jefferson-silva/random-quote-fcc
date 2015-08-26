@@ -11,6 +11,11 @@ $("#new-quote").on("click", function () {
 
 function newQuote (quote) {
 	$("#content").text(quote.quoteText);
-	$("#author").text(quote.quoteAuthor);
+
+	if (quote.quoteAuthor == "")
+		$("#author").text("Unknown Author");
+	else
+		$("#author").text(quote.quoteAuthor);
+	
 	$("#tweet").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURI(quote.quoteText));
 }
